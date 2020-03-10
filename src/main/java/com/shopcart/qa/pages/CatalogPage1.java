@@ -105,8 +105,9 @@ public class CatalogPage1 extends TestBase {
 	 */
 
 	public void VerifyNewProductByExcel(String Name, String Rcode, String JanCode, String UPCCode) {
-		Actions act = new Actions(driver);
-		act.moveToElement(cat_Link).build().perform();
+		//Actions act = new Actions(driver);
+		//act.moveToElement(cat_Link).build().perform();
+		TestUtil.actions(cat_Link, driver);
 		act.moveToElement(Prod_Link).click().build().perform();
 		add_Link.click();
 		virt_Prd.click();
@@ -157,15 +158,16 @@ public class CatalogPage1 extends TestBase {
 	}
 
 	public void verifyCategoreis() {
-		// TestUtil.actions(catalogLink, driver);
-		Actions mov = new Actions(driver);
-		mov.moveToElement(cat_Link).build().perform();
+		//Actions mov = new Actions(driver);
+		//mov.moveToElement(cat_Link).build().perform();
+		TestUtil.actions(cat_Link, driver);
 		driver.findElement(By.xpath("//*[@id='subtab-AdminCategories']/a")).click();
 	}
 
 	public void verifyMonitoring() { // TestUtil.actions(catalogLink, driver);
-		Actions mov = new Actions(driver);
-		mov.moveToElement(cat_Link).build().perform();
+		//Actions mov = new Actions(driver);
+		//mov.moveToElement(cat_Link).build().perform();
+		TestUtil.actions(cat_Link, driver);
 		driver.findElement(By.xpath("//*[@id='subtab-AdminTracking']/a")).click();
 	}
 	
