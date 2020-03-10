@@ -95,8 +95,8 @@ public class CustomerPage extends TestBase {
 
 
 	public void VerifyAdrresses() {
-		act.moveToElement(customer).build().perform();
-
+		//act.moveToElement(customer).build().perform();
+		TestUtil.actions(customer, driver);
 		driver.findElement(By.xpath("//*[@id=\"subtab-AdminAddresses\"]/a")).click();
 
 	}
